@@ -2,10 +2,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generate-btn');
     const numberCircles = document.querySelectorAll('.number-circle');
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
     generateBtn.addEventListener('click', () => {
         const numbers = generateLottoNumbers();
         displayNumbers(numbers);
+    });
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
     });
 
     function generateLottoNumbers() {
